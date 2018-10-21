@@ -205,28 +205,8 @@ public class List<T> implements IList<T> {
         else{
             index--;
             item = item.getNext();
-            item = recursiveFunction(index, item);
-            return element;
+            item = recursiveSearching(index, item);
+            return item;
         }
-    }
-
-    public static void main(String[] args) {
-        List<Double> list = new List<>();
-        for (int i = 0; i < 10; i++) {
-            list.add(i+0.1);
-        }
-        /*list.printFromBeginning();
-        list.printFromEnd();
-        list.delete(1.1);
-        list.delete(9.1);
-        list.delete(0);
-        list.delete(4);
-        list.printFromBeginning();
-        list.insert(5.3, 4);
-        System.out.println(list.get(4));
-        System.out.println(list.search(5.3));
-        list.printFromBeginning();*/
-
-        list.getIndexRecursive(9);
     }
 }
